@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Skin Esthetics </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport content="width=device_width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="icon" href="LE-modified.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+          (function(){
+            emailjs.init("m3k5qWmTfuQYp6Ph_"); 
+          })();
+        </script>
+    </head>
+
+    <body>   
+        <div class = "header">
+            <div class = "left-section"> 
+                <img class = "logo" src = "LE.png">
+            </div>
+            <div class = "middle-section">
+            </div>
+            <div class = "right-section"> 
+                <a href = "#home" class="home" > Home </a>
+                <a href = "#services" class="services"> Services </a>
+                <a href = "#about" class="about"> About </a>
+                <a href = "#contact" class="contact"> Contact </a>
+            </div>
+        </div>
+        <section id="home">
+            <p class = "heading"> 
+                Skin Esthetics by Leslie Estevez
+            </p>
+            <p class = "subheading"> 
+                Provides facial skincare services &#183; Las Vegas, NV
+            </p>
+            <div class="slideshow">
+                <div class="slide fade" style="background-image: url('facial.jpeg');"></div>
+                <div class="slide fade" style="background-image: url('micro.jpg');"></div>
+                <div class="slide fade" style="background-image: url('backfacial.jpg');"></div>
+            </div>  
+        </section>
+        <section id="services">
+            <div class="options">
+                <div>
+                    <p> Add Ons: </p>
+                </div>
+                <div>
+                    <p> Services: </p>
+                </div>
+                <div>
+                    <p> More Services: </p>
+                </div>
+            </div>
+        <div class = "grid">
+            <div class = "col1">
+                <p>Custom Acid (Peeling)</p>
+                <p>Oxygen Infusion</p>
+                <p>Cupping Face Therapy</p>
+                <p>Diamond Tip Micro</p>
+                <p>Dermaplane</p>
+                <p>Neck Rejuvenation Therapy (10 mins)</p>
+            </div>
+            <div class = "col2"> 
+                <p>Simple Facial (45 mins)</p>
+                <p>Facial with Microdermabrasion (50 mins)</p>
+                <p>Facial with Dermaplane (50 mins)</p>
+                <p>Detox Facial</p>
+                <p>Acne Facial</p>
+                <p>Brightening Facial with Vitamin C</p>
+                <p>Oxygen Facial</p>
+                <p>HydraFacial with Oxygen
+                <p>24K Gold Facial</p>
+                <p>Anti-Aging Facial with Radiofrequency</p>
+                <p>Microcurrent Facial</p>
+                <p>Dermeluxx with Cryotherapy</p>
+                <p>Ultimate Lifting Facial</p>
+                <p>Back Facial with Microdermabrasion</p>
+            </div>
+            <div class = "col3">
+                <p>Lip Wax</p>
+                <p>Armpit Wax</p>
+                <p>Eyebrow Shaping</p>
+                <p>Brow Tint</p>
+                <p>Lash Tint</p>
+                <p>DermaPeel or MicroPeel</p>
+                <p>Jessner Perfection Peel</p>
+                <p>Microneedling</p>
+                <p>Microblading (Eyebrow Tattoo)</p>
+            </div>
+        </div>
+        </section>  
+        <video class="video" id="seVideo" autoplay muted loop playinline controls>
+          <source src="SkinEstheticsVideo.mov">
+          Your browser does not support this video.
+        </video>
+        <script>
+          const video = document.getElementById('seVideo');
+          video.volume = 0.2;
+        </script>
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="about-section">
+          <div class="about-container">
+            <h2>Advanced Esthetician &#183; Brow Tattoo Artist &#183; Owner</h2>
+            <img src="profile-image.jpeg" alt="Leslie Estevez" class="about-photo">
+            <p>
+              Leslie Estevez is the owner of Skin Esthetics, LLC, an advanced esthetician, 
+              and a certified brow tattoo artist. She combines 20 years of hands-on experience 
+              with a passion for helping clients feel confident in their own skin. 
+              Leslie specializes in customized skincare treatments and precision brow artistry, 
+              blending technical expertise with a gentle, client-focused approach.
+            </p>
+          </div>
+        </section>
+        <!-- ===== CONTACT ===== -->
+        <section id="contact">
+          <div class="container2">
+            <div class="text">Contact Us</div>
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="input-data">
+                  <input type="text" id="firstName" name="first_name" required>
+                  <div class="underline"></div>
+                  <label>First Name</label>
+                </div>
+                <div class="input-data">
+                  <input type="text" id="lastName" name="last_name" required>
+                  <div class="underline"></div>
+                  <label>Last Name</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-data">
+                  <input type="email" id="email" name="email" required>
+                  <div class="underline"></div>
+                  <label>Email Address</label>
+                </div>
+                <div class="input-data">
+                  <input type="text" id="subject" name="subject" required>
+                  <div class="underline"></div>
+                  <label>Subject</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-data textarea">
+                  <textarea id="message" name="message" rows="8" required></textarea>
+                  <div class="underline"></div>
+                  <label>Write your message</label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-data">
+                  <div class="center-container">
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        
+        <!-- Include EmailJS SDK -->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+          // Initialize EmailJS with your User ID
+          (function() {
+            emailjs.init("m3k5qWmTfuQYp6Ph_");
+          })();
+        
+          // Handle form submission
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            emailjs.sendForm('service_skinesthetics', 'template_o1tsbwy', this)
+              .then(function() {
+                alert('Email sent successfully!');
+                document.getElementById('contact-form').reset(); // Clear form
+              }, function(error) {
+                console.error('FAILED...', error);
+                alert('Error sending email.');
+              });
+          });
+        </script>   
+        <div class="end">
+          <iframe class="map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.1422109846408!2d-115.28794592436623!3d36.
+            11439297245063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8b9c8a4bd8779%3A0xecfa7667cd87be16!
+            2sAura%20Hair%20Salon%20and%20Spa!5e0!3m2!1sen!2sus!4v1747208606649!5m2!1sen!2sus" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <div class="info-box">
+            <p class="info">
+              Located inside Aura Salon & Spa <br>
+            <strong>8891 W Flamingo Rd, Unit 102, Las Vegas, NV 89147</strong>
+            </p>
+            <p class="book">
+              Call or Text <strong>(305)244-3499</strong> to book appointment
+            </p>
+            <div class="social-links">
+            <a href="https://instagram.com/skinestheticsle" target="_blank">
+              <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://facebook.com/skinestheticsle" target="_blank">
+              <img src="facebook.png" alt="Facebook">
+            </a>
+          </div>
+          <p class="at">@skinestheticsle</p>
+          </div>
+        </div>
+        <footer>
+          © 2025 Skin Esthetics, LLC 
+          <br>
+          <small>
+            Website designed & developed by 
+            <a href="https://www.linkedin.com/in/leslieprograms" target="_blank">
+              Gonzalez, Leslie A.
+            </a>
+          </small>
+        </footer>
+    </body> 
+</html>

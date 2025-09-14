@@ -1,0 +1,66 @@
+.header {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    height: 50px;
+}
+
+.middle-section {
+    display: flex;
+    flex: 2;
+}
+
+.right-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home, .services, .about, .contact {
+    font-family: 'Poppins', Verdana, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4c1d95; 
+    text-decoration: none;  
+    background: none;      
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.home::after, .services::after, .about::after, .contact::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #8b5cf6; 
+    transition: width 0.3s ease;
+}
+
+.home:hover::after,
+.services:hover::after,
+.about:hover::after,
+.contact:hover::after {
+    width: 100%; 
+}
+
+.home:hover, .services:hover, .about:hover, .contact:hover {
+    color: #6d28d9; 
+}
+
+.home:hover, .services:hover, .about:hover, .contact:hover {
+    opacity: 0.6;
+}
