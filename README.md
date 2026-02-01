@@ -14,7 +14,7 @@
 
 ## Video Walkthrough
 
-<img src="assets/esthics.gif" width=500 alt="esthetics">
+<img src="assets/esthetics.gif" width=500 alt="esthetics">
 
 ## License
 
