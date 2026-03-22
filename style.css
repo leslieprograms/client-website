@@ -345,6 +345,53 @@ form .form-row .textarea{
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+.social-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.social-links a {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.18s;
+}
+.social-links a img {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(122,92,250,0.10);
+  background: #fff;
+  transition: transform 0.22s cubic-bezier(.4,1.5,.6,1), box-shadow 0.22s;
+}
+.social-links a::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%) scale(0.95);
+  background: #000000;
+  padding: 3px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.18s, transform 0.18s;
+  z-index: 10;
+}
+.social-links a:hover::after,
+.social-links a:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.05);
+}
+.social-links a:hover img,
+.social-links a:focus img {
+  transform: scale(1.18) rotate(-8deg);
+  box-shadow: 0 6px 18px rgba(122,92,250,0.18);
+}
+
 /* Handle small screens */
 @media (max-width: 768px) {
   .end {
@@ -369,6 +416,15 @@ form .form-row .textarea{
 .about-container {
   max-width: 800px;
   margin: 0 auto;
+  transition: max-height 0.5s cubic-bezier(.4,1.5,.6,1), padding 0.5s cubic-bezier(.4,1.5,.6,1);
+  overflow: hidden;
+  max-height: 320px; 
+  padding-bottom: 0;
+}
+
+.about-section:hover .about-container {
+  max-height: 1000px; 
+  padding-bottom: 30px;
 }
 
 .about-section h2 {
@@ -384,6 +440,33 @@ form .form-row .textarea{
   object-fit: cover;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.25s cubic-bezier(.4,1.5,.6,1), box-shadow 0.2s, width 0.5s, height 0.5s;
+  will-change: transform, box-shadow, width, height;
+}
+.about-section:hover .about-photo {
+  width: 260px;
+  height: 260px;
+  transform: scale(1.12);
+  box-shadow: 0 12px 32px rgba(122,92,250,0.18);
+  z-index: 2;
+}
+
+.about-section .about-text {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(.4,1.5,.6,1), opacity 0.4s;
+}
+
+.about-section:hover .about-text {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.about-photo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 24px rgba(122,92,250,0.13);
+  z-index: 2;
 }
 
 .about-section p {
@@ -407,4 +490,15 @@ footer small a {
 
 footer small a:hover {
   text-decoration: underline;
+}
+
+/* Expand grid boxes on hover */
+.col1, .col2, .col3 {
+  transition: transform 0.25s cubic-bezier(.4,1.5,.6,1), box-shadow 0.2s;
+  will-change: transform, box-shadow;
+}
+.col1:hover, .col2:hover, .col3:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 24px rgba(122,92,250,0.13);
+  z-index: 2;
 }
