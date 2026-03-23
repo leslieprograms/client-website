@@ -1,7 +1,123 @@
+/* Hamburger menu styles */
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 18px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .hamburger span,
+    .hamburger span:before,
+    .hamburger span:after {
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 4px;
+        background: #4c1d95;
+        border-radius: 2px;
+        transition: all 0.3s;
+        content: '';
+    }
+    .hamburger span {
+        top: 14px;
+        left: 0;
+    }
+    .hamburger span:before {
+        top: -10px;
+        left: 0;
+        content: '';
+    }
+    .hamburger span:after {
+        top: 10px;
+        left: 0;
+        content: '';
+    }
+    .hamburger.active span {
+        background: transparent;
+    }
+    .hamburger.active span:before {
+        top: 0;
+        transform: rotate(45deg);
+        background: #4c1d95;
+    }
+    .hamburger.active span:after {
+        top: 0;
+        transform: rotate(-45deg);
+        background: #4c1d95;
+    }
+    .right-section {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        z-index: 99;
+        transition: opacity 0.3s;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .right-section.open {
+        display: flex;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .right-section.open a {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        color: #4c1d95;
+    }
+}
+/* Responsive header for mobile */
 .header {
-    height: 40px;
-    display: flex;
-    flex-direction: row;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        align-items: stretch;
+        padding: 0;
+        position: static;
+        z-index: 10;
+    }
+    .left-section {
+        position: static;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .logo {
+        height: 38px;
+        margin: 0 auto 8px auto;
+        display: block;
+    }
+    .right-section {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 0;
+    }
+    .home, .services, .about, .contact {
+        display: block;
+        width: 100%;
+        padding: 12px 0 12px 20px;
+        border-bottom: 1px solid #eee;
+        font-size: 20px;
+        text-align: left;
+    }
 }
 
 .left-section {
