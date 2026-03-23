@@ -12,6 +12,13 @@ html {
   margin-bottom: 0;
 }
 
+@media (max-width: 900px) {
+  .heading {
+    margin-top: 60px;
+    font-size: 22px;
+  }
+}
+
 .subheading{
   color: rgb(96, 96, 96);
   font-family: Verdana, Arial;
@@ -81,6 +88,10 @@ html {
   display: block;
   margin: 0 auto;
   margin-top: 15px;
+  max-width: 100vw;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .container2{
@@ -222,21 +233,80 @@ form .form-row .textarea{
   z-index: 2;
 }
 
-@media (max-width: 700px) {
-  .container .text{
-    font-size: 30px;
+@media (max-width: 900px) {
+  .options {
+    display: none;
   }
-  .container form{
-    padding: 10px 0 0 0;
-  }
-  .container form .form-row{
+  .scroll-hint {
     display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #7b2cbf;
+    margin-bottom: 10px;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    user-select: none;
+    width: 100vw;
+    background: none;
   }
-  form .form-row .input-data{
-    margin: 35px 0!important;
+  .grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 2vw 10px 2vw;
   }
-  .submit-btn .input-data{
-    width: 40%!important;
+  .col1, .col2, .col3 {
+    min-width: 220px;
+    flex: 0 0 220px;
+    font-size: 15px;
+    padding: 10px 6px;
+    border-radius: 10px;
+    margin-bottom: 0;
+  }
+  .video {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+  }
+  .container2 {
+    max-width: 100vw;
+    width: 100vw;
+    padding: 10px 2vw 10px 2vw;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 18px;
+    padding: 0 6px;
+  }
+  .subheading {
+    font-size: 12px;
+    padding: 0 6px;
+  }
+  .options {
+    font-size: 16px;
+  }
+  .col1, .col2, .col3 {
+    min-width: 150px;
+    font-size: 12px;
+    padding: 6px 2px;
+  }
+  .container2 .text {
+    font-size: 18px;
+  }
+  .about-section h2 {
+    font-size: 16px;
+  }
+  .about-photo {
+    width: 70px;
+    height: 70px;
   }
 }
 
