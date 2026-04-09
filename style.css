@@ -3,6 +3,11 @@ html {
   background-color: #ffffff;
 }
 
+/* Hide scroll hint by default (desktop) */
+.scroll-hint {
+  display: none;
+}
+
 .heading {
   color: black;
   font-family: Dancing Script, Brush Script MT, Verdana, Arial;
